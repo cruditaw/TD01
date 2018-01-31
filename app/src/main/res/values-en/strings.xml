@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TD01</string>
+    <string name="devise_de_depart">Currency</string>
+    <string name="devise_de_conversion">Conversion currency</string>
+    <string name="usd">USD</string>
+    <string name="cad">CAD</string>
+    <string name="euro">EURO</string>
+    <string name="gbp">GBP</string>
+    <string name="yen">YEN</string>
+    <string name="montant">Amount</string>
+    <string name="resultat">Result</string>
+    <string name="taux_de_conversion">Exchange rate</string>
+    <string name="raz">RESET</string>
+    <string name="convertir">CONVERT</string>
+    <string name="Switch_language">Lang</string>
+    <string name="eng">Eng</string>
+    <string name="fr">Fr</string>
+</resources>

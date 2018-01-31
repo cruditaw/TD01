@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cdsm.td01.MainActivity">
+
+    <TextView
+        android:id="@+id/txtStartDevise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/devise_de_depart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <RadioGroup
+        android:id="@+id/radioStartDevise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtStartDevise">
+
+        <RadioButton
+            android:id="@+id/radioStartUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usd" />
+
+        <RadioButton
+            android:id="@+id/radioStartCD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cad" />
+
+        <RadioButton
+            android:id="@+id/radioStartEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/euro" />
+
+        <RadioButton
+            android:id="@+id/radioStartGBP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gbp" />
+
+        <RadioButton
+            android:id="@+id/radioStartYen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yen" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/devise_de_conversion"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/radioStartDevise"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioEndDevise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDevices">
+
+        <RadioButton
+            android:id="@+id/radioEndUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usd" />
+
+        <RadioButton
+            android:id="@+id/radioEndCD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cad" />
+
+        <RadioButton
+            android:id="@+id/radioEndEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/euro" />
+
+        <RadioButton
+            android:id="@+id/radioEndGBP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gbp" />
+
+        <RadioButton
+            android:id="@+id/radioEndYen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yen" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtMontant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/montant"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioEndDevise" />
+
+    <EditText
+        android:id="@+id/zoneMontant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/colorBlack"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMontant" />
+
+
+    <TextView
+        android:id="@+id/txtResultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/resultat"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/txtMontant"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioEndDevise" />
+
+    <TextView
+        android:id="@+id/zoneResultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBaseline_toBaselineOf="@id/zoneMontant"
+        app:layout_constraintLeft_toRightOf="@id/zoneMontant"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtResultat" />
+
+    <TextView
+        android:id="@+id/txtTaux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/taux_de_conversion"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/zoneResultat" />
+
+    <TextView
+        android:id="@+id/zoneTaux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="22dp"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTaux" />
+
+    <Button
+        android:id="@+id/btnRaz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/raz"
+        app:layout_constraintRight_toLeftOf="@id/btnConvert"
+        app:layout_constraintTop_toTopOf="@id/txtTaux" />
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/convertir"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtTaux" />
+
+    <TextView
+        android:id="@+id/txtMessages"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
